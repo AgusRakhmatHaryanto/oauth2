@@ -63,7 +63,9 @@ app.get("/logout", (req, res) => {
       if (err) {
         console.error("Error destroying session:", err);
       }
-      res.send("Logged out successfully"); // Redirect to the home page or any other desired page
+      res.send(
+        `Logged out successfully<a href="/">Go back to home page</a>`
+      ); // Redirect to the home page or any other desired page
       
     });
   });
